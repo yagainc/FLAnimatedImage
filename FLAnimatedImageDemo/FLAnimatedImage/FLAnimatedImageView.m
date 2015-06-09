@@ -61,8 +61,10 @@
         
         // Start animating after the new animated image has been set.
         [self updateShouldAnimate];
-        if (self.shouldAnimate) {
-            [self startAnimating];
+        if(self.shouldPlayGifAutomatically) {
+            if (self.shouldAnimate) {
+                [self startAnimating];
+            }
         }
         
         [self.layer setNeedsDisplay];
